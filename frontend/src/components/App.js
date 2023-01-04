@@ -5,6 +5,7 @@ import "../../static/css/App.css";
 import Login from "./auth/Login";
 import Main from "./Main";
 import Register from "./auth/Register";
+import Navbar from "./Navbar";
 
 export default class App extends Component {
   constructor(props) {
@@ -17,7 +18,8 @@ export default class App extends Component {
         <Router>
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
-              <Route path="/" element={<Main />} />
+              <Route path="/" element={<Navbar />} />
+              <Route path="/home" element={<Main />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
             </Routes>

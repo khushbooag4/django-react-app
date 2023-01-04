@@ -10,15 +10,25 @@ export default function Login() {
           {/* Email input */}
           <h2 className="header-ap mb-4">Login to your account</h2>
           <div class="form-outline mb-4">
-            <input type="email" id="form2Example1" class="form-control" />
+            <input
+              type="text"
+              id="form2Example1"
+              class="form-control"
+              name="username"
+            />
             <label class="form-label" for="form2Example1">
-              Email address
+              Username
             </label>
           </div>
 
           {/* Password input */}
           <div class="form-outline mb-4">
-            <input type="password" id="form2Example2" class="form-control" />
+            <input
+              type="password"
+              id="form2Example2"
+              class="form-control"
+              name="password"
+            />
             <label class="form-label" for="form2Example2">
               Password
             </label>

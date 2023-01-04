@@ -27,18 +27,25 @@ export const AddTransaction = () => {
       <form onSubmit={onSubmit} method="POST" action="/api/">
         <CSRFToken />
         <div className="form-control">
-          <label htmlFor="text">Text</label>
-          <input
-            type="text"
+          <label htmlFor="text">Spending Category</label>
+          <select
+            name="text"
+            className="btn btn-primary dropdown-toggle"
+            id="cars"
             value={text}
             onChange={(e) => setText(e.target.value)}
             placeholder="Enter text..."
-          />
+          >
+            <option value="outing">Outing</option>
+            <option value="houserent">House Rent</option>
+            <option value="grocery">Grocery</option>
+            <option value="travel">Travel</option>
+          </select>
         </div>
         <div className="form-control">
           <label htmlFor="amount">
             Amount <br />
-            (negative - expense, positive - income)
+            (add negative - expense, add positive - income)
           </label>
           <input
             type="number"
@@ -47,7 +54,7 @@ export const AddTransaction = () => {
             placeholder="Enter amount..."
           />
         </div>
-        <button className="btn">Add transaction</button>
+        <button className="btn btn-secondary mb-4">Add transaction</button>
       </form>
     </>
   );

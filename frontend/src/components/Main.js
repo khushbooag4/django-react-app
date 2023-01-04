@@ -8,12 +8,19 @@ import { GlobalProvider } from "../context/GlobalState";
 function Main() {
   return (
     <GlobalProvider>
-      <h2 className="header center">Budget Tracker</h2>
       <div className="container-ap">
+        <h2 className="header text-center">Money Tracker</h2>
         <Balance />
         <Expenses />
-        <TransactionList />
-        <AddTransaction />
+        <div class="row">
+          <div class="col">
+            <TransactionList />
+          </div>
+          <div class="col">
+            {" "}
+            <AddTransaction />
+          </div>
+        </div>
       </div>
     </GlobalProvider>
   );
